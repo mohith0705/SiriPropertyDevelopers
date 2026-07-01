@@ -443,6 +443,7 @@ ul { list-style: none; }
   position: relative;
   z-index: 2;
   max-width: 680px;
+  padding-top: 80px;
 }
 
 .hero-badge {
@@ -1496,6 +1497,14 @@ a.contact-info-icon:hover {
   .hero-stat-num { font-size: 1.8rem; }
 }
 
+@media (max-width: 768px) {
+  /* Push hero content down so badge clears the navbar */
+  .hero-content { padding-top: 100px; }
+
+  /* Hide scroll icon on mobile — it overlaps the stats */
+  .hero-scroll { display: none; }
+}
+
 @media (max-width: 480px) {
   .hero-buttons { flex-direction: column; }
   .btn-primary, .btn-outline { justify-content: center; }
@@ -1504,6 +1513,9 @@ a.contact-info-icon:hover {
   /* Nav logo shrinks on small phones */
   .nav-logo-name { font-size: 1.3rem !important; }
   .nav-logo-tagline { font-size: 0.6rem; }
+
+  /* Hero content more room on small phones */
+  .hero-content { padding-top: 110px; }
 
   /* Section padding tighter on phones */
   section { padding: 70px 0 !important; }
