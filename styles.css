@@ -673,13 +673,13 @@ ul { list-style: none; }
 .about-badge-text strong {
   display: block;
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: var(--color-dark);
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .about-badge-text small {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--color-muted);
   letter-spacing: 0.05em;
 }
@@ -1361,6 +1361,19 @@ a.contact-info-icon:hover {
   margin-bottom: 32px;
 }
 
+/* Footer logo — smaller than navbar logo */
+.footer-logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #C5A04C 0%, #f0d080 45%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  display: inline-block;
+}
+
 .footer-brand p {
   font-size: 0.9rem;
   color: rgba(255,255,255,0.45);
@@ -1476,7 +1489,20 @@ a.contact-info-icon:hover {
   .about-grid { grid-template-columns: 1fr; }
   .about-image-wrap { order: -1; }
   .about-image-outer { aspect-ratio: 4/3; }
-  .about-badge-float { left: 16px; bottom: -16px; min-width: 180px; padding: 14px 18px; }
+  .about-badge-float {
+    left: 8px;
+    bottom: 8px;
+    min-width: 160px;
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .about-badge-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .about-badge-text strong { font-size: 0.85rem; }
+  .about-badge-text small { font-size: 0.62rem; }
   .about-image-decor { display: none; }
 
   .services-grid { grid-template-columns: 1fr; }
