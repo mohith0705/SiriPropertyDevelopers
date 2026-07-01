@@ -1534,8 +1534,8 @@ a.contact-info-icon:hover {
   /* Hide scroll icon on mobile — it overlaps the stats */
   .hero-scroll { display: none; }
 
-  /* Hero stats don't overflow */
-  .hero-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
+  /* Hero stats stay in one row */
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 
   /* Section desc full width */
   .section-desc { max-width: 100%; }
