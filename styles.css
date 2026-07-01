@@ -1498,27 +1498,53 @@ a.contact-info-icon:hover {
 }
 
 @media (max-width: 768px) {
+  /* Shrink logo so it fits in ONE line on tablets */
+  .nav-logo-name { font-size: 1.8rem !important; }
+  .nav-logo-tagline { font-size: 0.58rem; }
+
   /* Push hero content down so badge clears the navbar */
-  .hero-content { padding-top: 100px; }
+  .hero-content { padding-top: 150px; }
 
   /* Hide scroll icon on mobile — it overlaps the stats */
   .hero-scroll { display: none; }
+
+  /* Hero stats don't overflow */
+  .hero-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
+
+  /* Section desc full width */
+  .section-desc { max-width: 100%; }
+
+  /* Hero title smaller on tablet */
+  .hero-title { font-size: clamp(2rem, 8vw, 3.5rem); }
 }
 
 @media (max-width: 480px) {
-  .hero-buttons { flex-direction: column; }
-  .btn-primary, .btn-outline { justify-content: center; }
-  .hero-badge { font-size: 0.65rem; }
-
-  /* Nav logo shrinks on small phones */
-  .nav-logo-name { font-size: 1.3rem !important; }
-  .nav-logo-tagline { font-size: 0.6rem; }
+  .hero-buttons { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-outline { justify-content: center; width: 100%; }
+  .hero-badge { font-size: 0.62rem; padding: 6px 12px; }
 
   /* Hero content more room on small phones */
-  .hero-content { padding-top: 110px; }
+  .hero-content { padding-top: 170px; }
+
+  /* Nav logo fits in one line on small phones */
+  .nav-logo-name { font-size: 1.3rem !important; }
+  .nav-logo-tagline { font-size: 0.52rem; }
+
+  /* Hero title readable on small phones */
+  .hero-title { font-size: clamp(1.8rem, 7vw, 2.8rem); line-height: 1.15; }
+
+  /* Hero subtitle smaller */
+  .hero-subtitle { font-size: 0.95rem; }
+
+  /* Stats row */
+  .hero-stat-num { font-size: 1.5rem; }
+  .hero-stat-label { font-size: 0.65rem; }
 
   /* Section padding tighter on phones */
   section { padding: 70px 0 !important; }
+
+  /* Section title smaller */
+  .section-title { font-size: clamp(1.6rem, 6vw, 2.2rem); }
 
   /* Signature text wraps nicely */
   .signature-text { font-size: 1rem; word-break: break-word; }
@@ -1532,6 +1558,9 @@ a.contact-info-icon:hover {
 
   /* Form padding tighter */
   .contact-form { padding: 28px 18px; }
+
+  /* Section desc full width */
+  .section-desc { max-width: 100%; font-size: 0.95rem; }
 }
 
 /* ============================================================
