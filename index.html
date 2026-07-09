@@ -9,10 +9,15 @@
   <meta name="keywords" content="real estate, luxury homes, villas, commercial property, investment, Siri Property Developers, Rajahmundry" />
   <meta property="og:title" content="Siri Property Developers — Premium Real Estate" />
   <meta property="og:description" content="Trusted real estate expertise for luxury residential and commercial properties in Rajahmundry, Andhra Pradesh." />
-  <meta property="og:image" content="images/hero-bg.png" />
+  <meta property="og:image" content="https://siripropertydevelopers.vercel.app/images/hero-bg.png" />
+  <meta property="og:url" content="https://siripropertydevelopers.vercel.app" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Siri Property Developers — Premium Real Estate" />
+  <meta name="twitter:description" content="Premium real estate in Rajahmundry, Andhra Pradesh. 27+ years of trusted expertise." />
+  <link rel="canonical" href="https://siripropertydevelopers.vercel.app" />
   <link rel="icon" type="image/png" href="images/hero-bg.png" />
-  <link rel="stylesheet" href="styles.css?v=2.0" />
+  <link rel="stylesheet" href="styles.css?v=3.0" />
 </head>
 <body>
  
@@ -59,7 +64,7 @@
  
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge fade-up">Trusted Since 2004 &nbsp;·&nbsp; Premium Real Estate</div>
+        <div class="hero-badge fade-up">Trusted Since 1998 &nbsp;·&nbsp; Premium Real Estate</div>
  
         <h1 class="hero-title fade-up">
           Find Your <em id="typewriter-word">Dream</em><br />Property With Us
@@ -110,7 +115,7 @@
  
         <div class="about-image-wrap fade-in">
           <div class="about-image-outer">
-             <img src="images/bandi-founder.png" alt="Founder — Bandi Venkataramaiah" loading="lazy" decoding="async" />
+             <img src="images/bandi-founder.png" alt="Bandi Venkata Narasimha Murthy — Founder" loading="lazy" decoding="async" />
           </div>
           <div class="about-image-decor"></div>
           <div class="about-badge-float">
@@ -123,7 +128,7 @@
         </div>
  
         <div class="about-content fade-up">
-          <span class="section-label">About Me</span>
+          <span class="section-label">About Us</span>
           <h2 class="section-title">Two Decades of <span>Real Estate</span> Excellence</h2>
           <div class="gold-divider"></div>
           <p class="section-desc">
@@ -478,12 +483,16 @@
   <div id="lightbox-modal" onclick="closeLightbox()">
     <div class="lightbox-content" onclick="event.stopPropagation()">
       <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+      <button class="lightbox-arrow lightbox-prev" onclick="changeProperty(-1)">&#8592;</button>
+      <button class="lightbox-arrow lightbox-next" onclick="changeProperty(1)">&#8594;</button>
       <img id="lightbox-img" src="" alt="Property" />
       <div class="lightbox-info">
-        <h3 id="lightbox-title"></h3>
-        <p id="lightbox-location"></p>
+        <div class="lightbox-info-text">
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-location"></p>
+        </div>
         <span id="lightbox-price"></span>
-        <a href="#contact" class="btn-primary" onclick="closeLightbox()" style="margin-top:20px; display:inline-flex;">✦ Enquire Now</a>
+        <a href="#contact" class="btn-primary" onclick="closeLightbox()" style="display:inline-flex; flex-shrink:0;">✦ Enquire Now</a>
       </div>
     </div>
   </div>
@@ -552,7 +561,7 @@
       </div>
  
       <div class="footer-bottom">
-        <p>© 2025 Siri Property Developers. All rights reserved.</p>
+        <p>© 2026 Siri Property Developers. All rights reserved.</p>
         <p>Designed with ♥ for excellence in real estate</p>
       </div>
     </div>
@@ -560,6 +569,10 @@
  
   <!-- Floating Contact Widget -->
   <div class="floating-contact">
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="floating-btn back-to-top" title="Back to Top" aria-label="Back to Top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+    </button>
     <a href="https://wa.me/919848451619?text=Hello%21%20I%20am%20interested%20in%20your%20properties." target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="Chat on WhatsApp">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.48 1.977 14.021.955 11.398.955c-5.448 0-9.876 4.372-9.88 9.802-.002 1.83.483 3.61 1.402 5.206L1.87 21.053l5.06-1.32c-.008-.005-.008-.005-.283-.579zm10.616-7.75c-.294-.145-1.74-.845-2.01-.941-.269-.096-.465-.144-.66.145-.197.29-.76.945-.93 1.139-.173.193-.347.217-.64.072-1.127-.567-1.953-1.002-2.73-2.316-.205-.347-.079-.53.06-.69l.483-.556c.15-.2.2-.347.3-.53.1-.197.05-.37-.025-.515-.075-.145-.66-1.564-.905-2.143-.244-.576-.489-.497-.66-.505-.17-.008-.367-.01-.564-.01-.197 0-.52.073-.79.37-.27.29-1.03.99-1.03 2.41 0 1.42 1.05 2.8 1.196 2.99.15.19 2.07 3.12 5.02 4.36.702.3 1.25.48 1.67.61.706.22 1.35.19 1.86.12.57-.08 1.74-.7 1.98-1.38.24-.68.24-1.26.17-1.38-.07-.11-.26-.18-.56-.32z"/></svg>
     </a>
@@ -571,9 +584,26 @@
   <!-- ===================== JS ===================== -->
   <script>
     const navbar = document.getElementById('navbar');
+    const backToTopBtn = document.getElementById('back-to-top');
+
     window.addEventListener('scroll', () => {
+      // Navbar scrolled style
       if (window.scrollY > 60) navbar.classList.add('scrolled');
       else navbar.classList.remove('scrolled');
+
+      // Back to top visibility
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
  
     window.addEventListener('load', () => {
@@ -731,21 +761,43 @@
     });
 
     // Lightbox
+    const properties = [
+      { src: 'images/property-villa.png',       title: 'Villa',                    location: '📍 Jubilee Hills, Hyderabad',              price: '₹3.6 Cr' },
+      { src: 'images/property-penthouse.png',   title: 'Individual House',         location: '📍 Vidyuth Colony 3rd st, Rajahmundry',   price: '₹1.7 Cr' },
+      { src: 'images/property-commercial.png',  title: 'Prestige Corporate Tower', location: '📍 Lakshmi Priya Layout, Tadepalligudem', price: '₹16k/sq yard' }
+    ];
+    let currentIndex = 0;
+
+    function showProperty(index) {
+      const p = properties[index];
+      document.getElementById('lightbox-img').src       = p.src;
+      document.getElementById('lightbox-title').textContent    = p.title;
+      document.getElementById('lightbox-location').textContent = p.location;
+      document.getElementById('lightbox-price').textContent    = p.price;
+    }
+
     function openLightbox(src, title, location, price) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox-title').textContent = title;
-      document.getElementById('lightbox-location').textContent = location;
-      document.getElementById('lightbox-price').textContent = price;
-      const modal = document.getElementById('lightbox-modal');
-      modal.classList.add('active');
+      currentIndex = properties.findIndex(p => p.src === src);
+      if (currentIndex === -1) currentIndex = 0;
+      showProperty(currentIndex);
+      document.getElementById('lightbox-modal').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
+
+    function changeProperty(dir) {
+      currentIndex = (currentIndex + dir + properties.length) % properties.length;
+      showProperty(currentIndex);
+    }
+
     function closeLightbox() {
       document.getElementById('lightbox-modal').classList.remove('active');
       document.body.style.overflow = '';
     }
+
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowRight') changeProperty(1);
+      if (e.key === 'ArrowLeft')  changeProperty(-1);
     });
 
     // Stats Counter Animation
