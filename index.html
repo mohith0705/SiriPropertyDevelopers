@@ -253,10 +253,11 @@
       <div class="listings-grid">
  
         <div class="property-card fade-up" id="listing-villa">
-          <div class="property-img-wrap">
+          <div class="property-img-wrap" onclick="openLightbox('images/property-villa.png','Villa','📍 Jubilee Hills, Hyderabad','₹3.6 Cr')">
             <img src="images/property-villa.png" alt="Luxury Villa" loading="lazy" decoding="async" />
             <span class="property-tag">Premium</span>
             <span class="property-price">₹3.6 Cr</span>
+            <div class="img-zoom-hint">🔍 Click to View</div>
           </div>
           <div class="property-details">
             <h3>Villa</h3>
@@ -271,10 +272,11 @@
         </div>
  
         <div class="property-card fade-up" id="listing-penthouse">
-          <div class="property-img-wrap">
-            <img src="images/property-penthouse.png" alt="Luxury Penthouse" />
+          <div class="property-img-wrap" onclick="openLightbox('images/property-penthouse.png','Individual House','📍 Vidyuth Colony 3rd st, Rajahmundry','₹1.7 Cr')">
+            <img src="images/property-penthouse.png" alt="Individual House" />
             <span class="property-tag">FOR SALE</span>
             <span class="property-price">₹1.7 Cr</span>
+            <div class="img-zoom-hint">🔍 Click to View</div>
           </div>
           <div class="property-details">
             <h3> 🏡 Individual House </h3>
@@ -289,10 +291,11 @@
         </div>
  
         <div class="property-card fade-up" id="listing-commercial">
-          <div class="property-img-wrap">
+          <div class="property-img-wrap" onclick="openLightbox('images/property-commercial.png','Prestige Corporate Tower','📍 Lakshmi Priya Layout, Tadepalligudem','₹16k/sq yard')">
             <img src="images/property-commercial.png" alt="Commercial Office Space" />
             <span class="property-tag">Commercial</span>
             <span class="property-price">₹16k/sq yard</span>
+            <div class="img-zoom-hint">🔍 Click to View</div>
           </div>
           <div class="property-details">
             <h3>Prestige Corporate Tower</h3>
@@ -471,7 +474,20 @@
       </div>
     </div>
   </section>
- 
+  <!-- ===================== LIGHTBOX MODAL ===================== -->
+  <div id="lightbox-modal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+      <img id="lightbox-img" src="" alt="Property" />
+      <div class="lightbox-info">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-location"></p>
+        <span id="lightbox-price"></span>
+        <a href="#contact" class="btn-primary" onclick="closeLightbox()" style="margin-top:20px; display:inline-flex;">✦ Enquire Now</a>
+      </div>
+    </div>
+  </div>
+
   <!-- ===================== FOOTER ===================== -->
   <footer id="footer">
     <div class="container">
@@ -712,6 +728,24 @@
       if (scrollPos <= window.innerHeight) {
         heroBgWrap.style.transform = `translate3d(0, ${scrollPos * 0.4}px, 0)`;
       }
+    });
+
+    // Lightbox
+    function openLightbox(src, title, location, price) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-title').textContent = title;
+      document.getElementById('lightbox-location').textContent = location;
+      document.getElementById('lightbox-price').textContent = price;
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
     });
 
     // Stats Counter Animation
